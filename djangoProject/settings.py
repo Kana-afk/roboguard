@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'equipmanager',
+
+    'rest_framework',
+    'drf_yasg',
+    'rest_framework.authtoken',
+
 ]
 
 MIDDLEWARE = [
@@ -77,11 +82,14 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'roboguard_database',
+        'USER':'postgres',
+        'PASSWORD':'admin',
+        'HOST':'localhost',
+        'PORT':'5433',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
